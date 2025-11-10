@@ -4,9 +4,20 @@
     box-sizing: border-box;
 }
 
+body,html{
+    height: 100%;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
 .site{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,10 +25,11 @@
 
 .menu{
     width: 100%;
-    height: 100px;
-    background-color: rgba(0, 0, 0, 0.703);
+    height: 80px;
+    background-color: white;
     display: flex;
     flex-direction: row;
+    color: black;
 }
 
 .footer{
@@ -26,6 +38,7 @@
     display: flex;
     background-color: black;
     flex-direction: column;
+    color: white;
 }
 
 .footer__box{
@@ -34,6 +47,7 @@
     flex-direction: row;
     display: flex;
     background-color: black;
+    color: white;
 }
 
 .footer__box__contact{
@@ -51,6 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .footer__h1{
@@ -71,62 +86,88 @@
 }
 
 .menu__logo{
-    height: 100px;
+    height: 80px;
     width: 15%;
 }
 
 .menu__main{
-    height: 100px;
+    height: 80px;
     width: 70%;
     flex-direction: row;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
-}
-
-.menu__icons{
-    height: 100px;
-    width: 15%;
-    color: white;
+    font-size: 17px;
 }
 
 img{
-    width: 200px;
-    height: 100px;
+    width: 160px;
+    height: 80px;
 }
 
 .menu__icons{
     flex-direction: row;
     display: flex;
-    gap: 50px;
+    gap: 20px;
     align-items: center;
     justify-content: center;
-    color: white;
+    height: 80px;
+    width: 15%;
+}
+
+.icon{
+    width: 35px;
+    height: 35px;
 }
 
 .menu__main__products{
-    color: white;
+    color: black;
     text-decoration: none;
+    height: 50%;
+    width: 200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
 }
 
 .menu__main__aboutus{
-    color: white;
+    color: black;
     text-decoration: none;
+    height: 50%;
+    width: 200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
 }
 
 .menu__main__contact{
-    color: white;
+    color: black;
     text-decoration: none;
+    height: 50%;
+    width: 200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
 }
 
 .menu__icons__person{
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
 .menu__icons__cart{
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -169,4 +210,277 @@ img{
     .footer__box__button__main {
         width: auto;
     }
+}
+
+
+.underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black; 
+  transition: width 0.4s ease; 
+}
+
+.underline:hover::after {
+  width: 100%;
+}
+
+.underline{
+    color: black;
+    text-decoration: none;
+    height: 50%;
+    width: 200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 90%;
+  height: 90%;
+  position: relative;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+
+.productbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+.hero{
+    width: 90%;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+}
+
+.productbox__main{
+    width: 35%;
+    height: 70%;
+    background-color: white;
+    display: flex;
+}
+
+.productbox {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    padding-left: 50px;
+    align-items: center;
+}
+
+.about-us{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-us__text{
+    color: black;
+    font-size: 30px;
+    font-weight: bolder;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.about-us__photo{
+    width: 50%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: red;
+}
+
+.about-us__people{
+    width: 100%;
+    height: 900px;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us__people__box{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 400px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0px 10px 37px 6px rgba(0,0,0,0.75);
+    border-radius: 5%;
+    margin: 30px;
+}
+
+.about-us__people__box__text{
+    font-weight: bolder;
+}
+
+@media (max-width: 1024px) {
+  .about-us__photo {
+    width: 80%;
+    height: 250px;
+  }
+
+  .about-us__text {
+    font-size: 26px;
+    padding: 0 1rem;
+  }
+
+  .about-us__people {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .about-us__people__box {
+    width: 180px;
+    height: 230px;
+    margin: 20px;
+  }
+}
+
+/* Pro mobily */
+@media (max-width: 768px) {
+  .about-us {
+    padding: 1rem 0;
+  }
+
+  .about-us__photo {
+    width: 90%;
+    height: 200px;
+  }
+
+  .about-us__text {
+    font-size: 22px;
+    padding: 0 1rem;
+  }
+
+  .about-us__people {
+    flex-direction: column;
+    height: auto;
+    flex-wrap: nowrap;
+  }
+
+  .about-us__people__box {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 15px 0;
+    padding: 1rem;
+  }
+
+  .about-us__people__box__photo img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .about-us__people__box__text {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .about-us__people__box__pozice {
+    font-size: 14px;
+  }
+}
+
+/* Pro velmi malé telefony */
+@media (max-width: 480px) {
+  .about-us__text {
+    font-size: 20px;
+  }
+
+  .about-us__photo {
+    height: 160px;
+  }
+
+  .about-us__people__box {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .about-us__people__box__text {
+    font-size: 16px;
+  }
 }

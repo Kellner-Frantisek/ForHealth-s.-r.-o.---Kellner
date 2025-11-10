@@ -17,7 +17,7 @@ body{
 
 .site{
     width: 100%;
-    height: 100%;
+    height: 150%;
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
@@ -30,42 +30,21 @@ body{
     display: flex;
     flex-direction: row;
     color: black;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 .footer{
     width: 100%;
-    height: 170px;
+    height: 20px;
     display: flex;
     background-color: black;
     flex-direction: column;
     color: white;
-}
-
-.footer__box{
-    width: 100%;
-    height: 120px;
-    flex-direction: row;
-    display: flex;
-    background-color: black;
-    color: white;
-}
-
-.footer__box__contact{
-    width: 50%;
-    height: 120px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    color: white;
-}
-
-.footer__box__button{
-    width: 50%;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    position: fixed;
+    bottom: 0;
+  
 }
 
 .footer__h1{
@@ -76,6 +55,7 @@ body{
     align-items: center;
     justify-content: center;
     color: white;
+    font-size: 12px;
 }
 
 .footer__box__button__main{
@@ -88,6 +68,7 @@ body{
 .menu__logo{
     height: 80px;
     width: 15%;
+    border: 0;
 }
 
 .menu__main{
@@ -175,25 +156,49 @@ img{
     .menu {
         flex-direction: column;
         height: 200px;
-        padding: 1rem 0;
         text-align: center;
     }
 
+    .menu__logo{
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      display: flex;
+    }
+
+    .menu__logo__img{
+      width: 100px;
+      height: auto;
+    }
+
     .menu__main {
-        flex-direction: column;
         gap: 1rem;
         width: 100%;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+
     }
 
     .menu__icons {
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
+      justify-content: center;
+      display: flex;
+      gap: 20px;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      padding-left: 50px;
     }
 
-    .menu__logo img {
-        display: none;
+    .menu__main__products, .menu__main__aboutus, .menu__main__contact{
+      display: flex;
+      border: none;
+      font-size: 15px;
     }
+
 
     .footer__box {
         flex-direction: column;
@@ -242,9 +247,10 @@ img{
 
 /* Slideshow container */
 .slideshow-container {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   position: relative;
+  display: flex;
 }
 
 /* Next & previous buttons */
@@ -258,22 +264,14 @@ img{
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
+  background-color: rgba(0, 0, 0, 0.144);
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Number text (1/3 etc) */
 
 .productbox {
   position: absolute;
@@ -282,37 +280,25 @@ img{
   height: 100%;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 .hero{
-    width: 90%;
-    height: 650px;
+    width: 98%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
     margin: auto;
     flex-direction: column;
+    padding-top: 80px;
 }
 
 .background{
@@ -324,20 +310,68 @@ img{
 
 .productbox__main{
     width: 35%;
-    height: 70%;
-    background-color: white;
+    height: 80%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .productbox {
     position: absolute;
     display: flex;
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: flex;
     justify-content: start;
+    margin: auto;
     padding-left: 50px;
     align-items: center;
+    flex-direction: row;
+    gap: 300px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.deep{
+  width: 80%;
+  height: 80%;
+}
+
+.vitamin{
+  width: 100%;
+  height: 100%;
+}
+
+.test{
+  width: 130%;
+  height: 90%;
+}
+
+.productbox__main__head{
+  width: 100%;
+  text-align: center;
+  height: 50%;
+  font-weight: bolder;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 80px ;
+  border-bottom: solid white 3px;
+  color: white;
+}
+
+.productbox__main__base{
+  width: 100%;
+  text-align: block;
+  height: 50%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 20px ;
+  color: white;
 }
 
 .about-us{
@@ -361,8 +395,8 @@ img{
 }
 
 .about-us__photo{
-    width: 50%;
-    height: 300px;
+    width: 80%;
+    height: 500px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -392,34 +426,74 @@ img{
     margin: 30px;
 }
 
+.about-us__people__box__photo img{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.about-us__people__box__photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-us__people__box__text{
     font-weight: bolder;
 }
 
-@media (max-width: 1024px) {
-  .about-us__photo {
-    width: 80%;
-    height: 250px;
-  }
-
-  .about-us__text {
-    font-size: 26px;
-    padding: 0 1rem;
-  }
-
-  .about-us__people {
-    height: auto;
-    padding: 2rem 1rem;
-  }
-
-  .about-us__people__box {
-    width: 180px;
-    height: 230px;
-    margin: 20px;
-  }
+.box{
+  display: flex;
+  width: 100%;
+  height: 1500px;
+  flex-direction: column;
 }
 
-/* Pro mobily */
+.box__product{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+}
+
+.box__product__photo{
+  width: 40%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.box__product__photo img{
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box__product__text{
+  width: 60%;
+  height: 500px;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box__product__text__base{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.box__product__text__head{
+  font-weight: bolder;
+  font-size: 60px;
+  padding-top: 50px;
+}
+
 @media (max-width: 768px) {
   .about-us {
     padding: 1rem 0;
@@ -427,7 +501,8 @@ img{
 
   .about-us__photo {
     width: 90%;
-    height: 200px;
+    height: 500px;
+    background-color: red;
   }
 
   .about-us__text {
@@ -439,6 +514,7 @@ img{
     flex-direction: column;
     height: auto;
     flex-wrap: nowrap;
+  
   }
 
   .about-us__people__box {
@@ -447,13 +523,26 @@ img{
     height: auto;
     margin: 15px 0;
     padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 
   .about-us__people__box__photo img {
     width: 80%;
     height: auto;
     border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
+
+   .about-us__people__box__photo{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+   }
 
   .about-us__people__box__text {
     font-size: 18px;
@@ -463,24 +552,25 @@ img{
   .about-us__people__box__pozice {
     font-size: 14px;
   }
-}
 
-/* Pro velmi malé telefony */
-@media (max-width: 480px) {
-  .about-us__text {
-    font-size: 20px;
-  }
+@media (max-width: 768px) {
 
-  .about-us__photo {
-    height: 160px;
-  }
-
-  .about-us__people__box {
+  .productbox {
+    gap: 30px;
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
     width: 90%;
-    margin: 10px 0;
   }
 
-  .about-us__people__box__text {
-    font-size: 16px;
+  .productbox__main {
+    width: 50%;
+  }
+
+  .productbox__main__head {
+    font-size: 36px;
+  }
+  .productbox__main__base{
+    font-size: 14px;
   }
 }

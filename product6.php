@@ -9,7 +9,8 @@ include "includes/menu.php"
         <div class="heroproduct__textbox__base"><p>Vitamin B12 je nezbytný pro tvorbu červených krvinek, správnou funkci nervového systému a normální energetický metabolismus. Podporuje také duševní vitalitu a snižuje pocit únavy a vyčerpání, což je důležité zejména pro vegetariány a vegany, kteří mohou mít zvýšené riziko jeho nedostatku.</p><br>
 
 <p>Tento doplněk stravy poskytuje praktický způsob, jak zajistit optimální příjem vitaminu B12. Pravidelné užívání podporuje energii, koncentraci a celkovou pohodu organismu, a přispívá k udržení zdravého nervového systému.</p><br></div>
-        <buttom class="heroproduct__textbox__button">Do košíku</button>
+    <div class="heroproduct__textbox__price">677 Kč</div>    
+<buttom class="heroproduct__textbox__button">Do košíku</button>
 
 
     </div>

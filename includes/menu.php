@@ -21,7 +21,7 @@
             </div>
 
             <div class="menu__icons">
-                <a href=""  class="menu__icons__person"><img class="icon" src="images/person.png" alt=""></a>
+                <a href="login.php"  class="menu__icons__person"><img class="icon" src="images/person.png" alt=""></a>
                 <a href="cart.php"  class="menu__icons__cart"><img class="icon" src="images/cart.png" alt=""></a>
             </div>
         </div>

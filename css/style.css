@@ -403,12 +403,11 @@ img {
   justify-content: center;
   align-items: center;
   display: flex;
-  background-color: red;
 }
 
 .about-us__people {
   width: 100%;
-  height: 900px;
+  height: 1100px;
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
@@ -429,16 +428,44 @@ img {
   margin: 30px;
 }
 
+.about-us__photo img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  width: 80%;
+  height: 80%;
+  background-size: cover;
+  border-radius: 25px;
+  box-shadow: 0px 10px 37px 6px rgba(0, 0, 0, 0.75);
+}
+
+
+.about-us__photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  width: 80%;
+  height: 80%;
+  background-size: cover;
+  padding-top: 100px;
+}
+
 .about-us__people__box__photo img {
   height: 100%;
   width: 100%;
   display: flex;
+  object-fit: cover;
 }
 
 .about-us__people__box__photo {
   display: flex;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .about-us__people__box__text {
@@ -1427,10 +1454,11 @@ button:hover {
 
 .hero4 {
   width: 100%;
-  height: auto;
+  height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding-top: 300px;
+  background-image: url("../images/pozadi.png");
+  background-size: cover;
 }
